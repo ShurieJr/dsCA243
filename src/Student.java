@@ -8,21 +8,23 @@ public class Student {
 
     //constructors
     Student() {
-        name = "Mohamed abdullahi";
-        ID = "C112160";
-        tel = "+2526152948";
-        gpa = 3.9;
-        status = true;
+//        name = "Mohamed abdullahi";
+//        ID = "C112160";
+//        tel = "+2526152948";
+//        gpa = 3.9;
+//        status = true;
+        this("Mohamed abdullahi","C112160","+2526152948" , 3.9 , true);
     }
 
-    Student(String newName, String newID,
-            String newTel, double newGpa, boolean newStatus) {
-        name = newName;
-        ID = newID;
-        tel = newTel;
-        gpa = newGpa;
-        status = newStatus;
+    public Student(String name, String ID, String tel, double gpa, boolean status) {
+        this.name = name;
+        this.ID = ID;
+        this.tel = tel;
+        this.gpa = gpa;
+        this.status = status;
     }
+
+
 
     //getters
     public String getName() {
@@ -77,5 +79,10 @@ public class Student {
         System.out.println("tel: " + tel);
         System.out.println("gpa: " + gpa);
         System.out.println("status: " + status);
+    }
+
+    static void main() {
+        Student s1 = new Student();
+        s1.display();
     }
 }
