@@ -5,15 +5,18 @@ public class Person {
     protected int age;
 
     public Person() {
-        name = "Mohamed";
-        tel = "+878";
-        age = 45;
+        this("mohamed" , "+878" , 45);
+//        name = "Mohamed";
+//        tel = "+878";
+//        age = 45;
+        System.out.println("no-arg person constructor");
     }
 
     public Person(String name, String tel, int age) {
         this.name = name;
         this.tel = tel;
         this.age = age;
+        System.out.println("param-constructor person constructor");
     }
 
     public String getName() {
