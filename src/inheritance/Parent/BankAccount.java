@@ -1,6 +1,6 @@
 package inheritance.Parent;
 
-public class BankAccount {
+public abstract class BankAccount {
     protected String accountHolder, accountNumber;
     protected double balance;
 
@@ -13,10 +13,11 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public void deposit(double amount) {
+    public void deposit(double amount) { //concrete method
         if (amount > 0)
             balance += amount;
     }
+    public abstract void withdraw(double amount); //abstract method
 
     protected void display() {
         System.out.println("accountHolder= " + accountHolder);

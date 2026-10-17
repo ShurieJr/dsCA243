@@ -9,7 +9,19 @@ public class SavingAccount extends BankAccount {
         super(accountHolder , accountNumber , balance);
     }
 
-   public void displayBalance(){
+    @Override
+    public void withdraw(double amount) {
+        if(amount > 0 && balance - amount >= 100 ){
+            balance -= amount;
+            System.out.println("withdrawn " + amount);
+        }
+        else{
+            System.out.println("minimum balance 100 required!");
+        }
+    }
+
+
+    public void displayBalance(){
         System.out.println("Saving account balance: " + balance);
     }
 
